@@ -21,11 +21,9 @@ data['date'] = pd.to_datetime(data['date'])
 # the plot
 plt.figure()
 plt.plot(data['date'], data['words'], color='r')
-plt.xlabel('FINAL YEAR')
+plt.xlabel('TIME')
 plt.ylabel('THESIS WORD COUNT')
 plt.title('THESIS WORD COUNT vs. TIME')
-
-plt.text(data['date'].head(1), data['words'].head(1), 'CREATED THESIS FILE', horizontalalignment='center', verticalalignment='center', size='small', color='black')
 
 
 # format the ticks
