@@ -21,6 +21,15 @@ $ pip install -r requirements.txt
 $ ./word_count.sh
 ```
 
+If you only want to incude certain files (e.g., chapter.tex files), replace `*.tex` in git command:
+
+```python
+...
+added=$(git show -p --word-diff=porcelain $commit -- "*abstract.tex" "*chap*.tex" "*introduction.tex" | grep -e '^+[^+]' | wc -w)
+deleted=$(git show -p --word-diff=porcelain $commit -- "*abstract.tex" "*chap*.tex" "*introduction.tex" | grep -e '^-[^-]' | wc -w)
+...
+``` 
+
 ### to set writing goals
 
 To set daily writing goals modify ```$daily_goal``` parameter in ```word_count.sh``` script and use today to run the script.
@@ -35,8 +44,9 @@ To set daily writing goals modify ```$daily_goal``` parameter in ```word_count.s
  ./word_count.sh | ./makegraph.py
 ```
 
-## TODOs/Ideas
+## Annotations coming soon...
 
+## TODOs/Ideas
+- annotations
 - add ignore meta files
-- milestones for graph
 - automatic GIT hooks for making graph
