@@ -6,6 +6,8 @@
 
 Script to count words over time in Tex files hosted on Git. Originally inspired by http://phdcomics.com/comics/archive_print.php?comicid=1915 and from  _Git Count Words_ LateX script by Bastian Rieck, originally available at https://gist.github.com/Submanifold/d7b996492dc3020f2acea87b49cc54c3.
 
+> **NOTE!** This solution uses Git's `--word-diff` to get the word count which over estimates, meaning that comments, tables etc. are all included in the word count!
+
 ### Requirements
 - [pandas](https://pandas.pydata.org/pandas-docs/stable/install.html)
 - [matplotlib](https://matplotlib.org/)
