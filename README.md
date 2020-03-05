@@ -23,7 +23,7 @@ $ ./word_count.sh
 
 If you only want to incude certain files (e.g., chapter.tex files), replace `*.tex` in git command:
 
-```python
+```bash
 ...
 added=$(git show -p --word-diff=porcelain $commit -- "*abstract.tex" "*chap*.tex" "*introduction.tex" | grep -e '^+[^+]' | wc -w)
 deleted=$(git show -p --word-diff=porcelain $commit -- "*abstract.tex" "*chap*.tex" "*introduction.tex" | grep -e '^-[^-]' | wc -w)
